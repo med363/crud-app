@@ -9,33 +9,33 @@ constructor(private readonly service: UsersService){};
 /*function*/
 @Post()
 Add(){
-    return 'add action';
+    return this.service.Add();
 }
 
 @Get()
 FindAll(){
-    return 'all users';
+    return this.service.FindAll();
 }
 
 @Get('/:id')
 GetById(@Param(){id}){
-    return id;
+    return this.service.GetById();
 }
 
 
 @Put('/:id')
 Update(@Param(){id}){
-    return id;
+    return this.service.Update();
 }
 
 @Delete('/:id')
 Delete(@Param(){id}){
-    return id;
+    return this.service.Delete();
 }
 
 @Post('/search')
 Search(@Query(){key}){
-    return key;
+    return this.service.Search();
 }
 
 
