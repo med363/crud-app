@@ -1,5 +1,6 @@
-import { Controller, Delete, Get, Param, Post, Put, Query } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, Post, Put, Query } from '@nestjs/common';
 import { UsersService } from './users.service';
+import { UserDto } from 'src/dto/users.dto';
 
 @Controller('users')
 export class UsersController {
@@ -8,8 +9,8 @@ constructor(private readonly service: UsersService){};
 /*les methodes API*/
 /*function*/
 @Post()
-Add(){
-    return this.service.Add();
+Add(@Body() body: UserDto){
+    return this.service.Add(body);
 }
 
 @Get()
