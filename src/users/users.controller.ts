@@ -20,23 +20,28 @@ FindAll(){
 
 @Get('/:id')
 GetById(@Param(){id}){
-    return this.service.GetById();
+    return this.service.GetById(id);
 }
 
 
 @Put('/:id')
-Update(@Param(){id}){
-    return this.service.Update();
+Update(@Param(){id,body}){
+    return this.service.Update(id,body);
 }
 
 @Delete('/:id')
 Delete(@Param(){id}){
-    return this.service.Delete();
+    return this.service.Delete(id);
 }
 
 @Post('/search')
 Search(@Query(){key}){
-    return this.service.Search();
+    return this.service.Search(key);
+}
+
+@Post('/faker')
+Faker(){
+    return this.service.Faker();
 }
 
 
