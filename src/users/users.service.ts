@@ -1,9 +1,10 @@
 import { Injectable } from '@nestjs/common';
+import { UserDto } from 'src/dto/users.dto';
 
 @Injectable()
 export class UsersService {
 
-Add(){
+Add(body: UserDto){
     return 'add action';
 }
 
