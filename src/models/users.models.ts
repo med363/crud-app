@@ -13,4 +13,4 @@ export class User{
     country: string;
 }
 
-export const UserScema = SchemaFactory.createForClass(User)
+export const UserSchema = SchemaFactory.createForClass(User)
