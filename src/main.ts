@@ -6,8 +6,7 @@ import { ValidationError } from 'class-validator';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
-  /*add verifier to dto*/
-  app.useGlobalPipes(new ValidationPipe());
+ 
   /*add prefix ds url*/
   app.setGlobalPrefix('/api')
 
