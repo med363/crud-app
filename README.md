@@ -26,6 +26,28 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
+## install nest
+npm i -g @nestjs/cli
+# create new project nest
+nest new project-name
+# generate module et lors de la generee il l'import automatiquement dans app.mod>
+nest g mo users
+# genere controllers
+nest g co users
+# generate srv
+nest g s users
+# delete the default module and services
+#add extention of test API==> thunder
+# install variable d'environnement
+npm i @nest/config
+# install mongoose => ORM pour manipuler mongo
+npm i @nestjs/mongoose mongoose
+# install validator
+npm i --save class-validator class-transformer
+# install package faker
+npm i --save-dev @faker-js/faker
+
+
 ## Installation
 
 ```bash
