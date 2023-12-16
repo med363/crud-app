@@ -27,7 +27,7 @@ GetById(id: string){
 
 
 
-Update(id: string, body: UserDto) {
+ Update(id: string, body: UserDto) {
     return this.userModel.findByIdAndUpdate(
       { _id: id },
       { $set: body },
