@@ -10,7 +10,6 @@ import { faker } from '@faker-js/faker'
 export class UsersService {
 constructor(@InjectModel(User.name) private userModel: Model<UserDocument>){}
 Add(body: UserDto){
-
     
     return this.userModel.create(body);
 
@@ -28,7 +27,7 @@ GetById(id: string){
 
 
 
-Update(id: string, body: UserDto) {
+ Update(id: string, body: UserDto) {
     return this.userModel.findByIdAndUpdate(
       { _id: id },
       { $set: body },
